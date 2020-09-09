@@ -33,7 +33,7 @@ namespace Carpool
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApi(Configuration.GetSection("AzureAd"))
                     .EnableTokenAcquisitionToCallDownstreamApi()
-                        .AddMicrosoftGraph(Configuration.GetSection("DownstreamApi"))
+                        .AddMicrosoftGraph(Configuration.GetSection("MicrosoftGraph"))
                         .AddInMemoryTokenCaches();
 
             services.AddControllers();

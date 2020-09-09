@@ -7,6 +7,7 @@ using Microsoft.Graph;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Identity.Web.Resource;
+using Carpool.Models;
 
 namespace Carpool.Controllers
 {
@@ -30,12 +31,12 @@ namespace Carpool.Controllers
        }
 
         [HttpGet]
-        public async Task<IEnumerable<string>> Get()
+        public async Task<IEnumerable<Stakeholder>> Get()
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
             var users = await _graphServiceClient.Users.Request().GetAsync();
 
-            return users.Select(u => u.DisplayName);
+            return users.Select(u => new Stakeholder { DisplayName = u.DisplayName, PhoneNumber = u.MobilePhone });
         }
     }
 }

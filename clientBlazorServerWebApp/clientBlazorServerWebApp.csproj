@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+     <TargetFrameworks>netcoreapp3.1; net5.0</TargetFrameworks>
+     <UserSecretsId>5aca34be-d20d-4cfa-ae7a-cde86f22255f</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Identity.Web" Version="0.4.*-*" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="0.4.*-*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+</Project>

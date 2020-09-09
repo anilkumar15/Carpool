@@ -27,19 +27,15 @@ namespace Carpool.Controllers
 
         private readonly GraphServiceClient _graphServiceClient;
 
-        public RidesController(ILogger<RidesController> logger,
-                                         GraphServiceClient graphServiceClient)
+        public RidesController(ILogger<RidesController> logger)
         {
              _logger = logger;
-            _graphServiceClient = graphServiceClient;
        }
 
         [HttpGet]
-        public async Task<IEnumerable<string>> Get()
+        public IEnumerable<string> Get()
         {
             HttpContext.VerifyUserHasAnyAcceptedScope(scopeRequiredByApi);
-            var user = await _graphServiceClient.Me.Request().GetAsync();
-
             return rides;
         }
     }

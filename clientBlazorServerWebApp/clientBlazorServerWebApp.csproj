@@ -4,8 +4,8 @@
      <UserSecretsId>5aca34be-d20d-4cfa-ae7a-cde86f22255f</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.Identity.Web" Version="0.4.*-*" />
-    <PackageReference Include="Microsoft.Identity.Web.UI" Version="0.4.*-*" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="0.3.*-*" />
+    <PackageReference Include="Microsoft.Identity.Web.UI" Version="0.3.*-*" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
